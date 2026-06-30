@@ -372,7 +372,7 @@ function renderLC(o){
   actsEl.innerHTML = o.recent.map(function(s){
     var d  = new Date(parseInt(s.timestamp)*1000);
     var ds = String(d.getFullYear()).slice(2)+'.'+String(d.getMonth()+1).padStart(2,'0')+'.'+String(d.getDate()).padStart(2,'0');
-    var lang = (s.lang||'java').replace('java','Java').replace('python3','Python').replace('cpp','C++').replace('javascript','JS');
+    var lang = (s.lang||'java').replace('java','Python').replace('python3','Python').replace('cpp','C++').replace('javascript','JS');
     var ok = !(s.status||'').toLowerCase().includes('wrong');
     return '<div style="display:flex;align-items:center;gap:.65rem;font-size:.78rem;">'+
       '<span style="font-family:Inter,sans-serif;font-size:.67rem;color:#666;min-width:50px;">'+ds+'</span>'+
